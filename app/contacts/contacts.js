@@ -82,10 +82,7 @@ angular.module('myContacts.contacts', ['ngRoute','firebase'])
 					zipcode: zipcode
 				}
 			]
-		}).then(function(ref){
-			var id = ref.key();
-			console.log('Added Contact with ID: '+id);
-
+    })
 			// Clear Form
 			clearFields();
 
@@ -94,8 +91,20 @@ angular.module('myContacts.contacts', ['ngRoute','firebase'])
 
 			// Send Message
 			$scope.msg = "Contact Added";
-		});
 	}
+		// }).then(function(ref){
+		// 	var id = ref.key();
+		// 	console.log('Added Contact with ID: '+id);
+    //
+		// 	// Clear Form
+		// 	clearFields();
+    //
+		// 	// Hide Form
+		// 	$scope.addFormShow = false;
+    //
+		// 	// Send Message
+		// 	$scope.msg = "Contact Added";
+		// });
 
 
 	$scope.editFormSubmit = function(){
